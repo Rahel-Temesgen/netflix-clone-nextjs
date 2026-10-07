@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .radial-bg {
+    background:
+      radial-gradient(
+        80% 520% at 50% -420%,
+        rgba(64, 97, 231, 0.4) 80%,
+        rgba(0, 0, 0, 0.1) 100%
+      ),
+      black;
+  }
+
+  .navbar {
+    background: rgba(0, 0, 0, 1);
+  }
+}
