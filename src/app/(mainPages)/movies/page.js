@@ -6,7 +6,7 @@ const moviesPage = () => {
   return (
     <>
       <Banner base_url='https://api.themoviedb.org/3/trending/movie/day' />
-      <section className='relative -top-[5vh] px-6 space-y-[4vw]'>
+      <section className='relative -top-[5vh] px-6 -mb-[5vh] -space-y-[25vh] md:-space-y-48'>
         <Movies
           category='Popular on Netflix'
           base_url='https://api.themoviedb.org/3/movie/popular'
@@ -21,6 +21,7 @@ const moviesPage = () => {
           category='Top 10 TV Shows'
           base_url='https://api.themoviedb.org/3/movie/top_rated'
           type='movie'
+          lastChild
         />
       </section>
     </>
