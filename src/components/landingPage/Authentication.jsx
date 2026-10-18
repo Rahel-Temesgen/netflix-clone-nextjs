@@ -44,6 +44,7 @@ const Authentication = () => {
           placeholder='Email address'
           name='email'
           value={email}
+          required
           onChange={(e) => setEmail(e.target.value)}
           className='border border-[#4b4a4a] text-[17x] p-4 bg-[rgba(30,30,30,0.48)] rounded-sm'
         />

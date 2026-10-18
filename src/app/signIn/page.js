@@ -37,6 +37,7 @@ const signInPage = () => {
               placeholder='Email address'
               name='email'
               value={email}
+              required
               onChange={(e) => setEmail(e.target.value)}
               className='border border-[#4b4a4a] text-white text-[17x] p-3 bg-[rgba(11,11,11,0.48)] rounded-sm w-full'
             />

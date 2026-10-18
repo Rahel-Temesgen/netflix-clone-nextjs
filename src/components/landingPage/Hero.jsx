@@ -17,17 +17,17 @@ const Hero = () => {
 
   return (
     <section className='min-h-screen bg-[url(../../public/homePage-bg.jpg)] bg-no-repeat bg-cover bg-top '>
-      <main className='min-h-screen bg-gradient-to-b from-[rgba(0,0,0,0.9)] from-5% via-[rgba(0,0,0,0.6)] via-20% to-[rgba(0,0,0,0.83)] to-80%'>
+      <main className='min-h-screen bg-gradient-to-b from-[rgba(0,0,0,0.9)] from-5% via-[rgba(0,0,0,0.5)] via-20% to-[rgba(0,0,0,0.8)] to-80%'>
         <Header />
-        <div className='flex flex-col text-white text-center px-24 py-24 md:px-[26vw] space-y-2'>
+        <div className='flex flex-col text-white text-center p-[16vw] md:px-[26vw] md:py-[7vw]'>
           <h1 className='text-4xl md:text-[4.5vw] font-bold md:leading-18'>
             Unlimited movies, TV shows, and more
           </h1>
 
-          <p className='text-md font-normal md:text-[1.5vw] md:font-medium'>
+          <p className='text-md font-normal md:text-[1.5vw] md:font-medium my-4'>
             Starts at USD 2.99. Cancel anytime.
           </p>
-          <p className='text-md my-2'>
+          <p className='text-md md:text-[16px] md:mt-4'>
             Ready to watch? Enter your email to create or restart your
             membership.
           </p>
@@ -40,6 +40,7 @@ const Hero = () => {
               placeholder='Email address'
               name='email'
               value={email}
+              required
               onChange={(e) => setEmail(e.target.value)}
               className='border border-[#4b4a4a] text-[17x] p-3 bg-[rgba(21,21,21,0.48)] rounded-sm'
             />

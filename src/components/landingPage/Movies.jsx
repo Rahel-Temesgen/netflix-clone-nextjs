@@ -1,7 +1,32 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { movies } from '../../data'
+import Link from 'next/link'
 
 const Movies = () => {
+  const [movies, setMovies] = useState([])
+
+  const API_KEY = process.env.NEXT_PUBLIC_API_KEY
+  const url = `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url)
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+        const data = await response.json()
+        setMovies(data.results)
+      } catch (error) {
+        console.error('fetch failed: ', error)
+      }
+    }
+
+    fetchData()
+  }, [])
+
   return (
     <section>
       <div className='relative -top-5 left-0 right-0 border-t-4 border-red-400 rounded-tl-[100%] rounded-tr-[100%] radial-bg w-full h-15'></div>
@@ -10,32 +35,29 @@ const Movies = () => {
           Trending Now
         </h2>
         <div className='flex w-full overflow-auto touch-auto scroll-smooth no-scrollbar snap-mandatory snap-x'>
-          {movies.map((movie) => {
-            const { order, moviePoster } = movie
+          {movies.map((movie, index) => {
+            if (index >= 10) return null
             return (
               <div
                 className='shrink-0 snap-start p-[2.2vw] md:p-[1.8vw]'
-                key={order}
+                key={index}
               >
-                <div className='group  hover:cursor-pointer '>
-                  <div className=' w-[113px] h-[150px] md:w-[14.5vw] md:h-[42vh] relative transition duration-300 ease-in-out group-hover:scale-105'>
-                    <Image
-                      src={moviePoster}
-                      alt='movie poster'
-                      fill
-                      className='rounded-lg'
-                    />
+                <Link href='/signIn'>
+                  <div className='relative group  hover:cursor-pointer'>
+                    <div className=' w-[113px] h-[150px] md:w-[14.5vw] md:h-[42vh] relative transition duration-300 ease-in-out group-hover:scale-105'>
+                      <Image
+                        src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                        alt='movie poster'
+                        fill
+                        unoptimized
+                        className='rounded-lg'
+                      />
+                    </div>
+                    <h1 className='absolute top-19 md:-top-1.5 -left-5 text-7xl md:text-[8.5vw] [-webkit-text-stroke:2px_rgba(366,366,366,0.9)] font-bold z-50 transition duration-300 ease-in-out group-hover:translate-y-0.5'>
+                      {index + 1}
+                    </h1>
                   </div>
-                  <svg className='h-1 w-1 stroke-gray-300 stroke-2 overflow-visible select-none pointer-events-none relative z-50 transition duration-300 ease-in-out group-hover:translate-y-0.5'>
-                    <text
-                      className='text-7xl md:text-[8.5vw] font-bold'
-                      x='-22'
-                      y='-20'
-                    >
-                      {order}
-                    </text>
-                  </svg>
-                </div>
+                </Link>
               </div>
             )
           })}

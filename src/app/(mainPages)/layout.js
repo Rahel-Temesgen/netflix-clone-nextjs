@@ -56,7 +56,7 @@ const NavigationBar = ({ children }) => {
           <span className='text-white text-[3vw] md:text-[1.5vw]'>
             <FaSearch />
           </span>
-          <Link href='/signIn'>
+          <Link href='/'>
             <div className='w-[5vw] h-[5vw] md:w-[3vw] md:h-[3vw] relative'>
               <Image
                 src={profilePicture}

@@ -1,6 +1,5 @@
 import Banner from '../../../components/Banner'
 import Movies from '../../../components/Movies'
-import Top from '../../../components/Top'
 import Top10 from '../../../components/Top10'
 
 const homePage = () => {
