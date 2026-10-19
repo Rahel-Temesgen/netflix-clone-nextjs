@@ -1,32 +1,9 @@
-import movie01 from '../public/trendingMovies/movie01.webp'
-import movie02 from '../public/trendingMovies/movie02.webp'
-import movie03 from '../public/trendingMovies/movie03.webp'
-import movie04 from '../public/trendingMovies/movie04.webp'
-import movie05 from '../public/trendingMovies/movie05.webp'
-import movie06 from '../public/trendingMovies/movie06.webp'
-import movie07 from '../public/trendingMovies/movie07.webp'
-import movie08 from '../public/trendingMovies/movie08.webp'
-import movie09 from '../public/trendingMovies/movie09.webp'
-import movie10 from '../public/trendingMovies/movie10.webp'
 import {
   PiTelevisionSimpleBold,
   PiDownloadSimpleBold,
   PiCompassBold,
   PiSmileyBold,
 } from 'react-icons/pi'
-
-const movies = [
-  { order: 1, moviePoster: movie01 },
-  { order: 2, moviePoster: movie02 },
-  { order: 3, moviePoster: movie03 },
-  { order: 4, moviePoster: movie04 },
-  { order: 5, moviePoster: movie05 },
-  { order: 6, moviePoster: movie06 },
-  { order: 7, moviePoster: movie07 },
-  { order: 8, moviePoster: movie08 },
-  { order: 9, moviePoster: movie09 },
-  { order: 10, moviePoster: movie10 },
-]
 
 const reasonsToJoin = [
   {
@@ -112,4 +89,4 @@ const moreInfo = [
   { title: 'Only on Netflix' },
 ]
 
-export { movies, reasonsToJoin, faqs, moreInfo }
+export { reasonsToJoin, faqs, moreInfo }
