@@ -27,7 +27,7 @@ const signInPage = () => {
             <h1 className='text-white text-[5vw] md:text-5xl font-bold text-center'>
               Enter your info to get started
             </h1>
-            <p className='text-[#adaeae] text-[2.5vw] md:text-lg'>
+            <p className='text-[#adaeae] text-md md:text-lg'>
               Or sign in to an existing account.
             </p>
           </div>

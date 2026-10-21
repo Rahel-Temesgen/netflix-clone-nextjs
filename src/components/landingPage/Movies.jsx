@@ -44,7 +44,7 @@ const Movies = () => {
               >
                 <Link href='/signIn'>
                   <div className='relative group  hover:cursor-pointer'>
-                    <div className=' w-[113px] h-[150px] md:w-[14.5vw] md:h-[42vh] relative transition duration-300 ease-in-out group-hover:scale-105'>
+                    <div className=' w-[116px] h-[152px] md:w-[14.5vw] md:h-[42vh] relative transition duration-300 ease-in-out group-hover:scale-105'>
                       <Image
                         src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
                         alt='movie poster'
@@ -53,7 +53,7 @@ const Movies = () => {
                         className='rounded-lg'
                       />
                     </div>
-                    <h1 className='absolute top-19 md:-top-1.5 -left-5 text-7xl md:text-[8.5vw] [-webkit-text-stroke:2px_rgba(366,366,366,0.9)] font-bold z-50 transition duration-300 ease-in-out group-hover:translate-y-0.5'>
+                    <h1 className='absolute top-18 md:top-32 -left-5 md:-left-7 text-7xl md:text-[8.5vw] [-webkit-text-stroke:2px_rgba(366,366,366,0.9)] font-bold z-50 transition duration-300 ease-in-out group-hover:translate-y-0.5'>
                       {index + 1}
                     </h1>
                   </div>

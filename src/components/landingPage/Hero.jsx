@@ -42,13 +42,13 @@ const Hero = () => {
               value={email}
               required
               onChange={(e) => setEmail(e.target.value)}
-              className='border border-[#4b4a4a] text-[17x] p-3 bg-[rgba(21,21,21,0.48)] rounded-sm'
+              className='border border-[#4b4a4a] text-lg p-3 bg-[rgba(21,21,21,0.48)] rounded-sm'
             />
             <button
               type='submit'
               className='flex items-center justify-center gap-4 bg-red-600 p-3 capitalize  rounded-sm hover:bg-red-700 hover:cursor-pointer'
             >
-              <span className='font-medium text-[17px] md:text-[1.9vw]'>
+              <span className='font-medium text-lg md:text-[1.9vw]'>
                 get started
               </span>
               <FiChevronRight strokeWidth={2} className='text-3xl' />

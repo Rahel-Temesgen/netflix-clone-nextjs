@@ -16,11 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang='en'
-      className={`${myFont.className} light`}
-      style={{ colorScheme: 'light' }}
-    >
+    <html lang='en' className={`${myFont.className} light`}>
       <body className='min-h-full flex flex-col bg-black'>{children}</body>
     </html>
   )

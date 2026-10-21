@@ -32,7 +32,7 @@ const Authentication = () => {
 
   return (
     <section className='text-white p-8 md:px-[20vw]'>
-      <p className='text-center leading-14'>
+      <p className='text-center my-4'>
         Ready to watch? Enter your email to create or restart your membership.
       </p>
       <form
@@ -46,13 +46,13 @@ const Authentication = () => {
           value={email}
           required
           onChange={(e) => setEmail(e.target.value)}
-          className='border border-[#4b4a4a] text-[17x] p-4 bg-[rgba(30,30,30,0.48)] rounded-sm'
+          className='border border-[#4b4a4a] text-lg p-4 bg-[rgba(30,30,30,0.48)] rounded-sm'
         />
         <button
           type='submit'
           className='flex items-center justify-center gap-4 bg-red-600 p-4 capitalize  rounded-sm hover:bg-red-700 hover:cursor-pointer'
         >
-          <span className='font-medium text-[17px] md:text-[1.8vw]'>
+          <span className='font-medium text-lg md:text-[1.8vw]'>
             get started
           </span>
           <FiChevronRight strokeWidth={2} className='text-3xl' />

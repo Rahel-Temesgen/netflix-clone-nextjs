@@ -1,5 +1,15 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: only light;
+}
+
+html {
+  color-scheme: only light;
+}
+
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;

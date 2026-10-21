@@ -23,7 +23,7 @@ const Footer = () => {
           )
         })}
       </div>
-      <p className='text-[#929090] text-[2vw] md:text-[1.1vw] my-5'>
+      <p className='text-[#929090] text-sm md:text-[1.1vw] my-5'>
         This page is protected by Google reCAPTCHA to ensure you're not a bot.
       </p>
     </footer>
