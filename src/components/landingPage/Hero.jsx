@@ -17,7 +17,7 @@ const Hero = () => {
 
   return (
     <section className='min-h-screen bg-[url(../../public/homePage-bg.jpg)] bg-no-repeat bg-cover bg-top '>
-      <main className='min-h-screen bg-gradient-to-b from-[rgba(0,0,0,0.9)] from-5% via-[rgba(0,0,0,0.5)] via-20% to-[rgba(0,0,0,0.8)] to-80%'>
+      <main className='min-h-screen bg-linear-to-b from-[rgba(0,0,0,0.9)] from-5% via-[rgba(0,0,0,0.5)] via-20% to-[rgba(0,0,0,0.83)] to-80%'>
         <Header />
         <div className='flex flex-col text-white text-center p-[16vw] md:px-[26vw] md:py-[7vw]'>
           <h1 className='text-4xl md:text-[4.5vw] font-bold md:leading-18'>

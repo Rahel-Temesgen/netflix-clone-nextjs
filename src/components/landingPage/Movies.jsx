@@ -38,13 +38,10 @@ const Movies = () => {
           {movies.map((movie, index) => {
             if (index >= 10) return null
             return (
-              <div
-                className='shrink-0 snap-start p-[2.2vw] md:p-[1.8vw]'
-                key={index}
-              >
+              <div className='shrink-0 snap-start p-3 md:p-[1.8vw]' key={index}>
                 <Link href='/signIn'>
                   <div className='relative group  hover:cursor-pointer'>
-                    <div className=' w-[116px] h-[152px] md:w-[14.5vw] md:h-[42vh] relative transition duration-300 ease-in-out group-hover:scale-105'>
+                    <div className=' w-29 h-38 md:w-[14.5vw] md:h-[42vh] relative transition duration-300 ease-in-out group-hover:scale-105'>
                       <Image
                         src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
                         alt='movie poster'
@@ -53,7 +50,7 @@ const Movies = () => {
                         className='rounded-lg'
                       />
                     </div>
-                    <h1 className='absolute top-18 md:top-32 -left-5 md:-left-7 text-7xl md:text-[8.5vw] [-webkit-text-stroke:2px_rgba(366,366,366,0.9)] font-bold z-50 transition duration-300 ease-in-out group-hover:translate-y-0.5'>
+                    <h1 className='absolute top-18 md:top-32 -left-4 md:-left-7 text-7xl md:text-[8.5vw] [-webkit-text-stroke:2px_rgba(366,366,366,0.9)] font-bold text-black z-50 transition duration-300 ease-in-out group-hover:translate-y-0.5'>
                       {index + 1}
                     </h1>
                   </div>
