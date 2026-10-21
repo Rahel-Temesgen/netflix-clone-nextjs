@@ -22,9 +22,9 @@ const signInPage = () => {
         </div>
       </header>
       <main className='flex justify-center items-center '>
-        <div className='flex flex-col justify-center items-center px-22 py-8'>
+        <div className='flex flex-col justify-center items-center px-18 md:px-22 py-8'>
           <div className='w-full space-y-1'>
-            <h1 className='text-white text-[5vw] md:text-5xl font-bold text-center'>
+            <h1 className='text-white text-4xl md:text-5xl font-bold text-center'>
               Enter your info to get started
             </h1>
             <p className='text-[#adaeae] text-md md:text-lg'>
