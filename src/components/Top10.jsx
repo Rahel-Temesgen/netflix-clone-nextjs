@@ -46,9 +46,9 @@ const Top10 = ({ category, base_url, type, lastChild }) => {
         {category}
       </h2>
       <div
-        className={`relative -top-[14vh] md:-top-28 flex items-center w-full h-[300px]
-        md:h-[400px] overflow-x-auto overflow-y-hidden touch-auto scroll-smooth no-scrollbar
-        snap-mandatory snap-x px-6 space-x-2  ${lastChild ? '-mb-[14vh] md:-mb-28' : ''}`}
+        className={`relative top-[-14vh] md:-top-28 flex items-center w-full h-75
+        md:h-100 overflow-x-auto overflow-y-hidden touch-auto scroll-smooth no-scrollbar
+        snap-mandatory snap-x px-6 space-x-2  ${lastChild ? 'mb-[-14vh] md:-mb-28' : ''}`}
       >
         {movies.map((movie, index) => {
           if (index >= 10) return null
@@ -58,12 +58,12 @@ const Top10 = ({ category, base_url, type, lastChild }) => {
           return (
             <div className='shrink-0 snap-start' key={movie.id}>
               <figure
-                className={`relative ${index < 9 ? ' w-[157.5px]  md:w-[210px]' : 'w-[255px]  md:w-[340px]'} transition duration-100 ease-in-out hover:scale-125 hover:z-40 hover:shadow-[0_0_8px_2px_rgba(366,366,366,0.6)] bg-black group`}
+                className={`relative ${index < 9 ? ' w-[157.5px]  md:w-52.5' : 'w-63.75  md:w-85'} transition duration-100 ease-in-out hover:scale-125 hover:z-40 hover:shadow-[0_0_8px_2px_rgba(366,366,366,0.6)] bg-black group`}
               >
                 <Link
                   href={`/movieDetail/${movie.id}?title=${isMovie ? movie.title : movie.name}&backdrop_path=${movie.backdrop_path}&overview=${movie.overview}&type=${type ? type : movie.media_type}`}
                 >
-                  <div className='flex items-center w-full h-[118px] md:h-[158px] overflow-hidden'>
+                  <div className='flex items-center w-full h-29.5 md:h-39.5 overflow-hidden'>
                     <h1 className='relative -top-1 md:-top-1.5 left-3 text-[160px] md:text-[215px] [-webkit-text-stroke:3px_gray] font-medium'>
                       {index + 1}
                     </h1>

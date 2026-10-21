@@ -15,9 +15,9 @@ const signInPage = () => {
     setEmail('')
   }
   return (
-    <section className='bg-gradient-to-b from-[#411417]  to-transparent min-h-screen '>
+    <section className='bg-linear-to-b from-[#411417]  to-transparent min-h-screen '>
       <header className='border-b border-[rgba(109,97,97,0.4)] px-5 py-4'>
-        <div className='w-[110px] h-[50px] relative'>
+        <div className='w-27.5 h-12.5 relative'>
           <Image src={netflixLogo} alt='netflix logo' fill sizes='110px' />
         </div>
       </header>
@@ -39,7 +39,7 @@ const signInPage = () => {
               value={email}
               required
               onChange={(e) => setEmail(e.target.value)}
-              className='border border-[#4b4a4a] text-white text-[17x] p-3 bg-[rgba(11,11,11,0.48)] rounded-sm w-full'
+              className='border border-[#4b4a4a] text-white text-[17px] p-3 bg-[rgba(11,11,11,0.48)] rounded-sm w-full'
             />
             <button
               type='submit'
