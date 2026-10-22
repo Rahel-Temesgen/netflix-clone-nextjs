@@ -31,40 +31,44 @@ const Movies = ({ category, base_url, type }) => {
     fetchData()
   }, [])
 
-  const handleDropdown = (id) => {
-    setIsOpen(!isOpen)
-    if (isOpen) {
-      setShowOverview(id)
-    } else {
-      setShowOverview('')
-    }
-  }
+  // const handleDropdown = (id) => {
+  //   setIsOpen(!isOpen)
+  //   if (isOpen) {
+  //     setShowOverview(id)
+  //   } else {
+  //     setShowOverview('')
+  //   }
+  // }
 
   return (
-    <main>
+    <main className='space-y-2'>
       <h2 className='text-white text-[2.5vw] md:text-xl font-medium'>
         {category}
       </h2>
-      <div className='relative -top-20 md:-top-28 flex items-center w-full  h-75 md:h-100 overflow-x-auto overflow-y-hidden touch-auto scroll-smooth no-scrollbar snap-mandatory snap-x px-6 space-x-2 '>
+      <div className='flex items-center w-full  overflow-x-auto overflow-y-hidden touch-auto scroll-smooth no-scrollbar snap-mandatory snap-x space-x-2'>
         {movies.map((movie) => {
           const isMovie = (type || movie.media_type) === 'movie'
 
           return (
-            <div className='shrink-0 snap-start' key={movie.id}>
-              <figure className='relative w-[157.5px] md:w-52.5 transition duration-100 ease-in-out hover:scale-125 hover:z-40 hover:shadow-[0_0_8px_2px_rgba(366,366,366,0.6)] group'>
-                <Link
-                  href={`/movieDetail/${movie.id}?title=${isMovie ? movie.title : movie.name}&backdrop_path=${movie.backdrop_path}&overview=${movie.overview}&type=${type ? type : movie.media_type}`}
-                >
-                  <div className='w-full h-29.5 md:h-39.5 relative '>
-                    <Image
-                      src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-                      alt='movie poster'
-                      fill
-                      unoptimized
-                    />
-                  </div>
-                </Link>
-                <figcaption className='w-full p-2 bg-black hidden group-hover:block'>
+            <div
+              className='shrink-0 snap-start transition duration-300 ease-in-out hover:scale-105'
+              key={movie.id}
+            >
+              {/* <figure className='relative w-[157.5px] md:w-52.5 transition duration-100 ease-in-out hover:scale-125 hover:z-40 hover:shadow-[0_0_8px_2px_rgba(366,366,366,0.6)] group'> */}
+              <Link
+                href={`/movieDetail/${movie.id}?title=${isMovie ? movie.title : movie.name}&backdrop_path=${movie.backdrop_path}&overview=${movie.overview}&type=${type ? type : movie.media_type}`}
+              >
+                <div className='w-[157.5px] md:w-52.5 h-29.5 md:h-39.5 relative '>
+                  <Image
+                    src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                    alt='movie poster'
+                    fill
+                    unoptimized
+                  />
+                </div>
+              </Link>
+
+              {/* <figcaption className='w-full p-2 bg-black hidden group-hover:block'>
                   <div className='flex items-center justify-between'>
                     <span className='flex items-center gap-1'>
                       <button className='text-[2vw] md:text-[0.9vw] text-black bg-white border border-white p-1 rounded-full hover:bg-gray-400'>
@@ -92,7 +96,7 @@ const Movies = ({ category, base_url, type }) => {
                     <p>Adventure</p>
                   </div>
                 </figcaption>
-              </figure>
+              </figure> */}
             </div>
           )
         })}
