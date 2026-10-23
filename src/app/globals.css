@@ -10,6 +10,21 @@ html {
   color-scheme: only light;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Background track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Draggable handle */
+::-webkit-scrollbar-thumb {
+  background: #a5a4a4;
+  border-radius: 4px;
+}
+
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;

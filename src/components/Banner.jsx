@@ -32,46 +32,50 @@ const Banner = ({ base_url }) => {
 
   return (
     <section
-      className='min-h-[80vh] bg-cover bg-center bg-no-repeat text-white'
+      className='h-[80vh] sm:h-screen bg-cover bg-center bg-no-repeat text-white'
       style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
       }}
     >
-      <div className='flex items-center h-[80vh] bg-linear-to-r from-[rgba(0,0,0,0.8)] to-transparent'>
-        <div className='mx-6 w-[45vw] md:w-[30vw]'>
-          <div className='flex items-center gap-1'>
+      <div className='flex items-start py-38 h-[80vh] sm:h-screen bg-linear-to-r from-[rgba(0,0,0,0.8)] to-transparent'>
+        <div className='mx-6 w-[60vw] md:w-[50vw] lg:w-[40vw]'>
+          <div className='flex items-center gap-1 my-2'>
             <Image
               src={netflixIcon}
               alt='netflix-icon'
               width={0}
               height={0}
-              className='w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]'
+              className='w-5 h-5 md:w-8 md:h-8 '
             />
-            <p className='uppercase text-gray-300 text-[1.7vw] md:text-[1vw] tracking-[1vw]'>
+            <p className='uppercase text-gray-300 text-sm md:text-md tracking-[1vw]'>
               {movie.media_type === 'movie' ? 'movie' : 'series'}
             </p>
           </div>
-          <h1 className='text-[7vw] md:text-6xl leading-[6.5vw] md:leading-[4.5vw] font-bold'>
+          <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold'>
             {movie.media_type === 'movie' ? movie.title : movie.name}
           </h1>
           <div className='flex flex-wrap max-w-full gap-2 my-5'>
             <Link
               href={`/watch/${movie.id}?type=${movie.media_type}`}
-              className='flex items-center gap-[1vw] text-black bg-white px-[1.5vw] py-[0.5vw] text-[1.9vw] md:text-[1.1vw] rounded-[2px] hover:bg-gray-300'
+              className='flex items-center gap-[1vw] text-black bg-white px-[1.5vw] py-[0.5vw] text-sm md:text-lg lg:text-xl rounded-xs hover:bg-gray-300'
             >
               <IoPlaySharp />
               Play
             </Link>
             <Link
               href={`/movieDetail/${movie.id}?title=${movie.media_type === 'movie' ? movie.title : movie.name}&backdrop_path=${movie.backdrop_path}&overview=${movie.overview}&type=${movie.media_type}`}
-              className='flex items-center gap-[1vw] bg-gray-500 px-[1.5vw] py-[0.5vw] text-[1.9vw] md:text-[1.1vw] rounded-[2px]  hover:bg-gray-600'
+              className='flex items-center gap-[1vw] bg-gray-500 px-[1.5vw] py-[0.5vw] text-sm md:text-lg lg:text-xl rounded-xs  hover:bg-gray-600'
             >
               <FiInfo strokeWidth={3} />
               More Info
             </Link>
           </div>
-          <p className='my-5 text-[1.9vw] md:text-[1.1vw] text-gray-300'>
-            {movie.overview}
+          <p className='my-5 text-xs md:text-lg lg:text-xl text-gray-300'>
+            {movie?.overview
+              ? movie.overview.split(' ').length > 30
+                ? movie.overview.split(' ').slice(0, 30).join(' ') + '...'
+                : movie.overview
+              : ''}
           </p>
         </div>
       </div>

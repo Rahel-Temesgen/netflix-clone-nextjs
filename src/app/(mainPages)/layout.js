@@ -34,7 +34,7 @@ const NavigationBar = ({ children }) => {
           <div className='w-18 h-12 md:w-[7vw] md:h-[3.5vw] relative'>
             <Image src={netflixLogo} alt='netflix logo' fill unoptimized />
           </div>
-          <div className='flex items-center gap-2.5 text-xs md:text-[1vw] text-gray-300'>
+          <div className='flex items-center gap-2.5 text-[2vw] md:text-[1vw] text-gray-300'>
             <Link href='/home' className='focus:text-white'>
               Home
             </Link>
