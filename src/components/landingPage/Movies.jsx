@@ -41,7 +41,7 @@ const Movies = () => {
               <div className='shrink-0 snap-start p-3 md:p-[1.8vw]' key={index}>
                 <Link href='/signIn'>
                   <div className='relative group  hover:cursor-pointer'>
-                    <div className=' w-29 h-38 md:w-[14.5vw] md:h-[42vh] relative transition duration-300 ease-in-out group-hover:scale-105'>
+                    <div className=' w-28 h-38 md:w-[14.5vw] md:h-[42vh] relative transition duration-300 ease-in-out group-hover:scale-105'>
                       <Image
                         src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
                         alt='movie poster'

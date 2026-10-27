@@ -14,32 +14,27 @@ const page = async ({ params, searchParams }) => {
       }}
     >
       <div className='flex flex-col gap-[10vw] md:gap-10 '>
-        <Link
-          href='/home'
-          className='text-white text-[4vw] md:text-3xl px-4 py-2'
-        >
+        <Link href='/home' className='text-white text-lg md:text-3xl px-4 py-2'>
           <FiX strokeWidth={2} />
         </Link>
-        <div className='w-[60vw] md:w-[35vw] px-8'>
-          <p className='text-[2.1vw] md:text-sm text-gray-300 capitalize'>
+        <div className='w-[70vw] md:w-[50vw] px-8'>
+          <p className='text-sm md:text-lg text-gray-300 capitalize'>
             a netflix original film
           </p>
-          <h1 className='text-[9vw] leading-[11vw] md:text-6xl md:leading-[5vw] text-white font-medium'>
+          <h1 className='text-4xl md:text-6xl text-white font-medium my-2'>
             {title}
           </h1>
-          <p className='text-[2.3vw] md:text-[16px] text-gray-300 my-2'>
-            {overview}
-          </p>
+          <p className='text-sm md:text-lg text-gray-300 my-2'>{overview}</p>
           <div className='space-y-2 my-4'>
             <Link
               href={`/watch/${id}?type=${type}`}
-              className='flex items-center text-[2.5vw] md:text-[16px] gap-[1vw] border border-gray-300 rounded-sm px-2 hover:bg-[rgba(152,150,150,0.5)] w-[50%]'
+              className='flex items-center text-sm md:text-lg gap-[1vw] border border-gray-300 rounded-sm px-2 hover:bg-[rgba(152,150,150,0.5)] w-[65%] md:w-[50%]'
             >
               <IoPlaySharp />
               Play
             </Link>
-            <button className='flex items-center text-[2.5vw] md:text-[16px] gap-[1vw]  border border-gray-300 rounded-sm px-2 hover:bg-[rgba(152,150,150,0.5)] w-[50%]'>
-              <FiPlus strokeWidth={3} />
+            <button className='flex items-center text-sm md:text-lg gap-[1vw]  border border-gray-300 rounded-sm px-2 hover:bg-[rgba(152,150,150,0.5)] w-[65%] md:w-[50%]'>
+              <FiPlus strokeWidth={5} />
               Add to My List
             </button>
           </div>

@@ -3,13 +3,13 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FiPlus, FiChevronDown } from 'react-icons/fi'
-import { IoPlaySharp } from 'react-icons/io5'
+// import { FiPlus, FiChevronDown } from 'react-icons/fi'
+// import { IoPlaySharp } from 'react-icons/io5'
 
 const Movies = ({ category, base_url, type }) => {
   const [movies, setMovies] = useState([])
-  const [isOpen, setIsOpen] = useState(false)
-  const [showOverview, setShowOverview] = useState('')
+  // const [isOpen, setIsOpen] = useState(false)
+  // const [showOverview, setShowOverview] = useState('')
 
   const API_KEY = process.env.NEXT_PUBLIC_API_KEY
   const url = `${base_url}?api_key=${API_KEY}`
@@ -42,9 +42,7 @@ const Movies = ({ category, base_url, type }) => {
 
   return (
     <main className='space-y-2'>
-      <h2 className='text-white text-[2.5vw] md:text-xl font-medium'>
-        {category}
-      </h2>
+      <h2 className='text-white text-md md:text-xl font-medium'>{category}</h2>
       <div className='flex items-center w-full  overflow-x-auto overflow-y-hidden touch-auto scroll-smooth no-scrollbar snap-mandatory snap-x space-x-2'>
         {movies.map((movie) => {
           const isMovie = (type || movie.media_type) === 'movie'
@@ -58,12 +56,13 @@ const Movies = ({ category, base_url, type }) => {
               <Link
                 href={`/movieDetail/${movie.id}?title=${isMovie ? movie.title : movie.name}&backdrop_path=${movie.backdrop_path}&overview=${movie.overview}&type=${type ? type : movie.media_type}`}
               >
-                <div className='w-[157.5px] md:w-52.5 h-29.5 md:h-39.5 relative '>
+                <div className='w-28 h-38 md:w-52.5 md:h-39.5 relative'>
                   <Image
                     src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
                     alt='movie poster'
                     fill
                     unoptimized
+                    className='rounded-sm'
                   />
                 </div>
               </Link>

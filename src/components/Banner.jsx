@@ -32,12 +32,12 @@ const Banner = ({ base_url }) => {
 
   return (
     <section
-      className='h-[80vh] sm:h-screen bg-cover bg-center bg-no-repeat text-white'
+      className='h-[80vh] bg-cover bg-center bg-no-repeat text-white'
       style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
       }}
     >
-      <div className='flex items-start py-38 h-[80vh] sm:h-screen bg-linear-to-r from-[rgba(0,0,0,0.8)] to-transparent'>
+      <div className='flex items-center h-[80vh] bg-linear-to-r from-[rgba(0,0,0,0.8)] to-transparent'>
         <div className='mx-6 w-[60vw] md:w-[50vw] lg:w-[40vw]'>
           <div className='flex items-center gap-1 my-2'>
             <Image

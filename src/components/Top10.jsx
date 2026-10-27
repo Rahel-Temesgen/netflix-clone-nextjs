@@ -40,10 +40,8 @@ const Top10 = ({ category, base_url, type }) => {
   // }
 
   return (
-    <main className='border-2 '>
-      <h2 className='text-white text-[2.5vw] md:text-xl font-medium'>
-        {category}
-      </h2>
+    <main className='space-y-2'>
+      <h2 className='text-white text-md md:text-xl font-medium'>{category}</h2>
       {/* <div
         className={`relative top-[-14vh] md:-top-28 flex items-center w-full h-75
         md:h-100 overflow-x-auto overflow-y-hidden touch-auto scroll-smooth no-scrollbar
