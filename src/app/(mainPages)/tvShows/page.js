@@ -1,10 +1,12 @@
-import Banner from '../../../../components/Banner'
-import Movies from '../../../../components/Movies'
-import Top10 from '../../../../components/Top10'
+import Banner from '../../../components/Banner'
+import Movies from '../../../components/Movies'
+import Top10 from '../../../components/Top10'
+import FiltrationBar from '../../../components/FiltrationBar'
 
 const tvShowsPage = () => {
   return (
     <>
+      <FiltrationBar title='Tv Shows' />
       <Banner base_url='https://api.themoviedb.org/3/trending/tv/day' />
       <section className='relative top-[-5vh] px-6 mb-10  space-y-6'>
         <Movies

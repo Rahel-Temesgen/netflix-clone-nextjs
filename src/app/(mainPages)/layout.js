@@ -32,11 +32,16 @@ const NavigationBar = ({ children }) => {
         className={`fixed top-0 left-0 w-full transition-opacity bg-[rgba(0,0,0,0.5)] py-1 px-6 ${isScrolled ? 'navbar' : null} z-50`}
       >
         <div className='flex items-center justify-between'>
-          <Link href='/home'>
-            <div className='w-20 h-14 md:w-28 md:h-16 relative'>
-              <Image src={netflixLogo} alt='netflix logo' fill unoptimized />
+          <div className='flex items-center gap-20'>
+            <Link href='/home'>
+              <div className='w-20 h-14 md:w-28 md:h-16 relative'>
+                <Image src={netflixLogo} alt='netflix logo' fill unoptimized />
+              </div>
+            </Link>
+            <div className='hidden md:block'>
+              <Navbar />
             </div>
-          </Link>
+          </div>
 
           <div className='flex items-center gap-5'>
             <span className='text-white text-xl md:text-3xl'>
@@ -57,8 +62,8 @@ const NavigationBar = ({ children }) => {
         </div>
       </nav>
       {children}
-      <div>
-        <Navbar />
+      <div className='md:hidden'>
+        <Navbar mobile={true} />
       </div>
     </>
   )

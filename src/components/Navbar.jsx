@@ -2,15 +2,23 @@
 
 import Link from 'next/link'
 
-const Navbar = () => {
+const Navbar = ({ mobile = false }) => {
   return (
-    <div className='fixed bottom-0 left-0 flex items-center justify-center gap-8 text-sm md:text-lg text-gray-300 w-full bg-black py-4 '>
+    <div
+      className={
+        mobile
+          ? 'fixed bottom-0 left-0 flex items-center justify-center gap-10 text-sm text-gray-300 w-full bg-black py-4 z-50'
+          : 'flex items-center gap-5 text-md text-gray-300'
+      }
+    >
       <Link href='/home' className='focus:text-white'>
         Home
       </Link>
+
       <Link href='/tvShows' className='focus:text-white'>
         TVShows
       </Link>
+
       <Link href='/movies' className='focus:text-white'>
         Movies
       </Link>

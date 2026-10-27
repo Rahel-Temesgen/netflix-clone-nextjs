@@ -56,7 +56,7 @@ const Movies = ({ category, base_url, type }) => {
               <Link
                 href={`/movieDetail/${movie.id}?title=${isMovie ? movie.title : movie.name}&backdrop_path=${movie.backdrop_path}&overview=${movie.overview}&type=${type ? type : movie.media_type}`}
               >
-                <div className='w-28 h-38 md:w-52.5 md:h-39.5 relative'>
+                <div className='w-28 h-38 md:w-44 relative'>
                   <Image
                     src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
                     alt='movie poster'
